@@ -1,0 +1,54 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon" x:Class="FileBrowser.MainWindow"
+        Title="MainWindow" Height="350" Width="525" Closing="window_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/SmallIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <custom:Ribbon >
+            <custom:Ribbon.HelpPaneContent>
+                <custom:RibbonButton Label="Help"/>
+            </custom:Ribbon.HelpPaneContent>
+            
+            <custom:Ribbon.QuickAccessToolBar>
+                <custom:RibbonQuickAccessToolBar>
+                    <custom:RibbonButton SmallImageSource="{DynamicResource pasteIconSmall}"/>
+                </custom:RibbonQuickAccessToolBar>
+            </custom:Ribbon.QuickAccessToolBar>
+            
+            <custom:Ribbon.ApplicationMenu>
+                <custom:RibbonApplicationMenu>
+                    <custom:RibbonApplicationMenuItem x:Name="exitAppMenuButton" Header="Exit" 
+                                                      Click="exitAppMenuButton_Click"
+                                                      ImageSource="{DynamicResource exitIcon}"/>
+                </custom:RibbonApplicationMenu >
+            </custom:Ribbon.ApplicationMenu>
+            <custom:RibbonTab Header="Home">
+                <custom:RibbonGroup Header="Edit">
+                    <custom:RibbonButton Label="Paste"  LargeImageSource="{DynamicResource pasteIconSmall}"
+                                         Click="RibbonButton_Click"/>
+                    <custom:RibbonButton Label="Copy"/>
+                    <custom:RibbonButton Label="Edit Name"/>
+                </custom:RibbonGroup>
+            </custom:RibbonTab>
+            <custom:RibbonTab Header="Compressing">
+                <custom:RibbonButton x:Name="compressToButton" Label="Compress To..." Click="compressToButton_Click"/>
+            </custom:RibbonTab>
+            <custom:RibbonTab Header="Encryption">
+                
+            </custom:RibbonTab>
+            <custom:RibbonTab>
+                
+            </custom:RibbonTab>
+        </custom:Ribbon>
+    </Grid>
+</Window>
