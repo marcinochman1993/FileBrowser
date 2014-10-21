@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapImage x:Key="pasteIconSmall" UriSource="Icons/pasteIconSmall.png"/>
+    <BitmapImage x:Key="exitIcon" UriSource="Icons/exitIcon.png"/>
+    <BitmapImage x:Key="copyIconSmall" UriSource="Icons/copyIconSmall.png"/>
+    <BitmapImage x:Key="editIconSmall" UriSource="Icons/editIconSmall.png"/>
+    <BitmapImage x:Key="menuIconSmall" UriSource="Icons/menuIconSmall.png"/>
+    <BitmapImage x:Key="deleteIconSmall" UriSource="Icons/deleteIconSmall.png"/>
+    <BitmapImage x:Key="upIconSmall" UriSource="Icons/upIconSmall.png"/>
+    <BitmapImage x:Key="downIconSmall" UriSource="Icons/downIconSmall.png"/>
+    <BitmapImage x:Key="appIconBig" UriSource="Icons/appIconBig.png"/>
+    <BitmapImage x:Key="sortByNameIconSmall" UriSource="Icons/sortByNameIconSmall.png"/>
+    <BitmapImage x:Key="sortByDateIconSmall" UriSource="Icons/sortByDateIconSmall.png"/>
+    <BitmapImage x:Key="sortByTypeIconSmall" UriSource="Icons/sortByTypeIconSmall.png"/>
+    <BitmapImage x:Key="sortBySizeIconSmall" UriSource="Icons/sortBySizeIconSmall.png"/>
+    <BitmapImage x:Key="sortIcon" UriSource="Icons/sortIcon.png"/>
+</ResourceDictionary>

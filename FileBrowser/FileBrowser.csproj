@@ -70,7 +70,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Forms\MainWindow\Resources\SmallIcons.xaml">
+    <Page Include="Forms\MainWindow\Resources\Icons.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,6 +107,42 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Forms\MainWindow\Resources\Icons\exitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\copyIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\editIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\menuIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\deleteIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\upIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\downIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\appIconBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\sortByNameIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\sortByDateIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\sortByTypeIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\sortBySizeIconSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Forms\MainWindow\Resources\Icons\sortIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -38,21 +38,6 @@ namespace FileBrowser
         private void exitAppMenuButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void compressToButton_Click(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
-            saveFileDialog.ShowDialog(this);
-            MessageBox.Show(this,"Compressed to file " + saveFileDialog.SafeFileName,"Compressing Finished Succesfully",
-                MessageBoxButton.OK,MessageBoxImage.Information);
-        }
-
-        private void RibbonButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Paste");
-        }
-
-        
+        } 
     }
 }
