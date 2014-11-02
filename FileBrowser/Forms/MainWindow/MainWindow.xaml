@@ -2,8 +2,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:r="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon" 
+    xmlns:MOSoft="clr-namespace:FileBrowserControlsLibrary;assembly=FileBrowserControlsLibrary"
     x:Class="FileBrowser.MainWindow"
-    Title="MainWindow" Height="389" Width="678" Closing="window_Closing"
+    Title="MainWindow" Height="389" Width="749" Closing="window_Closing"
     Icon="{DynamicResource appIconBig}">
     <Window.Resources>
         <ResourceDictionary>
@@ -15,6 +16,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
         <r:Ribbon>
             <r:Ribbon.HelpPaneContent>
@@ -43,21 +45,33 @@
                     <r:RibbonButton Label="Edit Name" SmallImageSource="{DynamicResource editIconSmall}"/>
                     <r:RibbonButton Label="Delete" SmallImageSource="{DynamicResource deleteIconSmall}"/>
                 </r:RibbonGroup>
-                <r:RibbonGroup Header="Info">
-                    <r:RibbonButton Label="Show dialog" SmallImageSource="{DynamicResource copyIconSmall}"/>
-                </r:RibbonGroup>
                 <r:RibbonGroup Header="View">
-                    <r:RibbonCheckBox Label="View Hidden Files"/>
-                    <r:RibbonSplitButton Label="Group">
-                        <r:RibbonGallery MaxColumnCount="1" SelectedValuePath="Content" SelectedValue="Alphabetically" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <r:RibbonGalleryCategory>
-                            <r:RibbonGalleryItem Content="Alphabetically"/>
-                            <r:RibbonGalleryItem Content="Type"/>
-                            <r:RibbonGalleryItem Content="Size"/>
-                            <r:RibbonGalleryItem Content="Date modification"/>
-                            </r:RibbonGalleryCategory>
-                        </r:RibbonGallery>
-                    </r:RibbonSplitButton>
+                    <r:RibbonGroup>
+                        <r:RibbonCheckBox Label="View Hidden Files"/>
+                        <r:RibbonCheckBox Label="View Preview Bar"/>
+                    </r:RibbonGroup>
+                    <r:RibbonGroup>
+                        <r:RibbonMenuButton Label="Group">
+                            <r:RibbonGallery MaxColumnCount="1" SelectedValuePath="Content" SelectedValue="Alphabetically" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <r:RibbonGalleryCategory>
+                                    <r:RibbonGalleryItem Content="Alphabetically"/>
+                                    <r:RibbonGalleryItem Content="Type"/>
+                                    <r:RibbonGalleryItem Content="Size"/>
+                                    <r:RibbonGalleryItem Content="Date modification"/>
+                                </r:RibbonGalleryCategory>
+                            </r:RibbonGallery>
+                        </r:RibbonMenuButton>
+                        <r:RibbonMenuButton Label="View">
+                            <r:RibbonGallery ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectedValuePath="Content"
+                                             SelectedValue="Small icons">
+                                <r:RibbonGalleryCategory>
+                                    <r:RibbonGalleryItem Content="Small icons"/>
+                                    <r:RibbonGalleryItem Content="Big icons"/>
+                                    <r:RibbonGalleryItem Content="List"/>
+                                </r:RibbonGalleryCategory>
+                            </r:RibbonGallery>
+                        </r:RibbonMenuButton>
+                    </r:RibbonGroup>
                 </r:RibbonGroup>
                 <r:RibbonGroup Header="Sort" LargeImageSource="{DynamicResource sortIcon}">
                     <r:RibbonGroup>
@@ -71,14 +85,26 @@
                     <r:RibbonRadioButton Label="Ascending" GroupName="SortOrder" SmallImageSource="{DynamicResource upIconSmall}" IsChecked="True"/>
                     <r:RibbonRadioButton Label="Descending" GroupName="SortOrder" SmallImageSource="{DynamicResource downIconSmall}"/>
                 </r:RibbonGroup>
+                <r:RibbonGroup Header="Info">
+                    <r:RibbonButton Label="Show info" SmallImageSource="{DynamicResource copyIconSmall}"/>
+                </r:RibbonGroup>
             </r:RibbonTab>
-            <r:RibbonTab Header="Compressing">
+            <r:RibbonTab Header="Search">
+                <r:RibbonGroup Header="Extension Pattern">
+                    
+                </r:RibbonGroup>
+            </r:RibbonTab>
+            <r:RibbonTab Header="Compression">
                 <r:RibbonButton x:Name="compressToButton" Label="Compress To..."/>
             </r:RibbonTab>
             <r:RibbonTab Header="Encryption">
             </r:RibbonTab>
             <r:RibbonTab Header="Options">
             </r:RibbonTab>
+            <r:RibbonTab Header="Others">
+                <r:RibbonButton Label="About Program" Click="AboutButton_Click"/>
+            </r:RibbonTab>
         </r:Ribbon>
+        <MOSoft:FileBrowserControl Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
     </Grid>
 </Window>

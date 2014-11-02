@@ -38,6 +38,12 @@ namespace FileBrowser
         private void exitAppMenuButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            FileBrowser.AboutWindow aboutWnd = new FileBrowser.AboutWindow();
+            aboutWnd.ShowDialog();
         } 
     }
 }
